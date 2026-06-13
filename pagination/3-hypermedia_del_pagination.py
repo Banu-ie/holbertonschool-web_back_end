@@ -46,7 +46,8 @@ class Server:
         assert isinstance(page_size, int) and page_size > 0
         assert index in self.indexed_dataset()
 
-        data = self.indexed_dataset
+        data = self.indexed_dataset()
+        
         return []
 
         current_index = index
