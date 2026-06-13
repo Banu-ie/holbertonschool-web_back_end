@@ -47,7 +47,7 @@ class Server:
         assert index in self.indexed_dataset
 
         data = self.indexed_dataset
-        return = []
+        return []
 
         current_index = index
         collected = 0
