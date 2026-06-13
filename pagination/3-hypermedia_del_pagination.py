@@ -47,12 +47,12 @@ class Server:
         assert index in self.indexed_dataset()
 
         data = self.indexed_dataset()
-        
-        return []
 
         current_index = index
         collected = 0
         max_index = max(data.keys())
+
+        result = []
 
         while collected < page_size and current_index <= max_index:
             if current_index in data:
@@ -64,7 +64,7 @@ class Server:
 
         return {
             "index": index,
-            "data": data,
+            "data": result,
             "page_size": len(result),
             "next_index": next_index
         }
